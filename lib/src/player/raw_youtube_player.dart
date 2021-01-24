@@ -86,6 +86,7 @@ class _RawYoutubePlayerState extends State<RawYoutubePlayer>
             userAgent: userAgent,
             mediaPlaybackRequiresUserGesture: false,
             transparentBackground: true,
+            useShouldOverrideUrlLoading: true
           ),
         ),
         onWebViewCreated: (webController) {
@@ -205,6 +206,11 @@ class _RawYoutubePlayerState extends State<RawYoutubePlayer>
               },
             );
         },
+
+         onLoadStart: (webController,String url){
+            ShouldOverrideUrlLoadingAction.CANCEL;
+        },
+
         onLoadStop: (_, __) {
           if (_isPlayerReady) {
             controller.updateValue(

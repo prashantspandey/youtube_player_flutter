@@ -5,7 +5,7 @@ repository: https://github.com/sarbagyastha/youtube_player_flutter
 homepage: https://sarbagyastha.com.np
 
 environment:
-  sdk: '>=2.7.0 <3.0.0'
+  sdk: '>=2.8.4 <3.0.0'
 
 dependencies:
   flutter:

@@ -32,7 +32,11 @@ class YoutubePlayerValue {
     this.webViewController,
     this.isDragging = false,
     this.metaData = const YoutubeMetaData(),
+    this.openLinks = false,
   });
+
+final bool openLinks;
+
 
   /// Returns true when the player is ready to play videos.
   final bool isReady;
@@ -182,10 +186,9 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
 
   /// Plays the video.
   void play() => _callMethod('play()');
-
+  
   /// Pauses the video.
   void pause() => _callMethod('pause()');
-
   /// Loads the video as per the [videoId] provided.
   void load(String videoId, {int startAt = 0}) {
     _updateValues(videoId);

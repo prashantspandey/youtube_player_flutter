@@ -34,7 +34,7 @@ class _PlayPauseButtonState extends State<PlayPauseButton>
   void initState() {
     super.initState();
     _animController = AnimationController(
-      vsync: this,
+     vsync: this,
       value: 0,
       duration: const Duration(milliseconds: 300),
     );
